@@ -1,6 +1,9 @@
 <template>
-  <div class="button-container" v-bind:style="buttonWidth">
-    <a href="">
+  <div 
+    class="button-container" 
+    v-bind:style="buttonWidth"
+  >
+    <a v-bind:href="buttonLink" target="_blank">
       <div class="button-border">
         <div class="button-background">
           <div class="rectangle"></div>
@@ -18,15 +21,25 @@ export default {
     title: String,
     ico: String,
     width: String,
-    link: String
+    link: String,
+    routerLink: String
   },
   data() {
     return {
       buttonTitle: this.title,
       buttonIco: this.ico,
-      buttonWidth: this.width ? this.width : 'width: 250px'
+      buttonWidth: this.width ? this.width : 'width: 250px',
+      buttonLink: this.link ? this.link : '#',
+      // buttonRouterLink: this.routerLink
     }
   },
+  // methods: {
+  //   goTo() {
+  //     if (this.buttonRouterLink) {
+  //       this.$router.push('/about_me');
+  //     }
+  //   }
+  // }
 }
 </script>
 
@@ -81,8 +94,8 @@ export default {
   align-items: center;
   background: rgba(0, 0, 0, 0.9);
   clip-path: polygon(
-    0% 100%, 0% 0%, 19% 0%, 21% 7%, 100% 7%, 100% 78%, 94% 100%
-  );
+    0% 100%, 0% 0%, 18% 0%, 20% 7%, 100% 7%, 100% 78%, 94% 100%
+  )
 }
 .button-background img {
   margin: 10px;

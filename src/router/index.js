@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import MainPage from '../views/MainPage.vue'
 import WelcomePage from '../views/WelcomePage.vue'
+import AboutMe from '../views/AboutMe.vue'
 
 
 Vue.use(VueRouter)
@@ -13,7 +14,11 @@ const routes = [
   },
   {
     path: '/main_page',
-    component: MainPage
+    component: MainPage,
+  },
+  {
+    path: '/about_me',
+    component: AboutMe
   }
 ]
 

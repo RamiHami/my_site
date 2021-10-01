@@ -1,20 +1,23 @@
 <template>
-    
-    <div class="main-page">
-      <v-header></v-header>
-      <div class="main-page-container">
-        <div class="buttons-container">
-          <div class="buttons-wrapper">
-            <link-button 
-              v-for="(prop, key) in this.buttons"
-              v-bind:key="key"
-              v-bind="prop"
+  <div class="main-page">
+    <v-header></v-header>
+    <div class="main-page-container">
+      <div class="buttons-container">
+        <div class="buttons-wrapper">
+          <router-link
+            v-for="(prop, key) in this.buttons"
+            v-bind:key="key"
+            v-bind:to="prop.routerLink"
+          > 
+            <link-button v-bind="prop"
             />
-          </div>
+          </router-link>
         </div>
       </div>
-      <v-footer></v-footer>
     </div>
+    <v-footer></v-footer>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>

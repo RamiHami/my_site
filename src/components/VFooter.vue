@@ -6,7 +6,8 @@
           v-bind="{
             'ico': 'telegram.svg',
             'title': 'telegram',
-            'width': 'width: 350px'
+            'width': 'width: 350px',
+            'link': telegramLink
           }"
         ></v-link-button>
       </div>
@@ -15,7 +16,8 @@
           v-bind="{
             'ico': 'git.svg',
             'title': 'Github',
-            'width': 'width: 350px'
+            'width': 'width: 350px',
+            'link': gitLink
           }"
         ></v-link-button>
       </div>
@@ -31,6 +33,12 @@ export default {
   components: {
     VLinkButton
   },
+  data() {
+    return {
+      gitLink: 'https://github.com/RamiHami/my_site',
+      telegramLink: 'https://t.me/ramihami'
+    }
+  }
 }
 </script>
 
