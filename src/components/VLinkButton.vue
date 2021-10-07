@@ -7,8 +7,12 @@
       <div class="button-border">
         <div class="button-background">
           <div class="rectangle"></div>
-          <img v-bind:src="require(`../assets/icons/${buttonIco}`)" alt="" v-if="buttonIco">
-          <p>{{buttonTitle.toUpperCase()}}</p>
+          <img 
+            v-bind:src="require(`../assets/icons/${buttonIco}`)" 
+            alt="" 
+            v-if="buttonIco"
+          >
+          <p v-bind:style="buttonTextAlign">{{buttonTitle.toUpperCase()}}</p>
         </div>
       </div>
     </a>
@@ -22,7 +26,8 @@ export default {
     ico: String,
     width: String,
     link: String,
-    routerLink: String
+    routerLink: String,
+    textAlign: String
   },
   data() {
     return {
@@ -30,6 +35,7 @@ export default {
       buttonIco: this.ico,
       buttonWidth: this.width ? this.width : 'width: 250px',
       buttonLink: this.link ? this.link : '#',
+      buttonTextAlign: this.textAlign ? this.textAlign : ""
       // buttonRouterLink: this.routerLink
     }
   },

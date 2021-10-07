@@ -4,6 +4,7 @@
       <div class="buttons-container">
         <div class="buttons-wrapper">
           <router-link
+            class="text-decoration-none"
             v-for="(prop, key) in this.buttons"
             v-bind:key="key"
             v-bind:to="prop.routerLink"
@@ -73,5 +74,8 @@ export default {
   .buttons-main-page-container {
     height: 50%;
   }
+}
+.text-decoration-none {
+  text-decoration: none;
 }
 </style>

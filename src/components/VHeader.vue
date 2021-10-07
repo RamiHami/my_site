@@ -82,6 +82,7 @@ export default {
 .header-container {
   width: 100%;
   padding: 15px;
+  height: 35px;
 }
 .line {
   border-bottom: 2px solid rgb(255 103 103 / 80%);

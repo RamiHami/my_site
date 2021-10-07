@@ -3,7 +3,8 @@ import VueRouter from 'vue-router'
 import MainPage from '../views/MainPage.vue'
 import WelcomePage from '../views/WelcomePage.vue'
 import LinkButtons from '../views/LinkButtons.vue'
-import AboutMe from '../views/AboutMe.vue'
+import MyProjects from '../views/MyProjects.vue'
+import Resume from '../views/Resume.vue'
 
 
 Vue.use(VueRouter)
@@ -22,9 +23,13 @@ const routes = [
         component: LinkButtons
       },
       {
-        path: '/about_me',
-        component: AboutMe
-      }
+        path: '/my_projects',
+        component: MyProjects
+      },
+      {
+        path: '/resume',
+        component: Resume
+      },
     ]
   },
 ]
