@@ -113,9 +113,6 @@ export default {
 	},
 	mounted() {
 		window.addEventListener('keyup', e => {
-			// if (e.key === "Space" || e.keyCode === 32) {
-			// 	this.goToMainPage();
-			// }
       if ((e.key === "Backspace" || e.keyCode === 8)) {
         this.goToMainPage();
       }
