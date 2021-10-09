@@ -107,17 +107,18 @@ export default {
     }
   },
   methods: {
-		goToMainPage() {
-			this.$router.push('/main_page');
-		}
+    createListener(e) {
+      if (e.key === "Backspace" || e.keyCode === 8) {
+        this.$router.push('/main_page');
+      }
+    }
 	},
 	mounted() {
-		window.addEventListener('keyup', e => {
-      if ((e.key === "Backspace" || e.keyCode === 8)) {
-        this.goToMainPage();
-      }
-		});
-	} 
+    window.addEventListener('keyup', this.createListener);
+	},
+  beforeDestroy() {
+    window.removeEventListener('keyup', this.createListener);
+  }
 }
 </script>
 

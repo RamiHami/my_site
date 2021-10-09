@@ -27,18 +27,22 @@ export default {
 
 		}
 	},
-	methods: {
-		goToMainPage() {
-			this.$router.push('/main_page');
-		}
+  methods: {
+    goToMainPage() {
+      this.$router.push('/main_page');
+    },
+    createListener(e) {
+      if (e.key === "Space" || e.keyCode === 32) {
+        this.goToMainPage();
+      }
+    }
 	},
 	mounted() {
-		window.addEventListener('keyup', e => {
-			if (e.key === "Space" || e.keyCode === 32) {
-				this.goToMainPage();
-			}
-		});
-	}   
+    window.addEventListener('keyup', this.createListener);
+	},
+  beforeDestroy() {
+    window.removeEventListener('keyup', this.createListener);
+  } 
 }
 </script>
 

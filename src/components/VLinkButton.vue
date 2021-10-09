@@ -12,7 +12,11 @@
             alt="" 
             v-if="buttonIco"
           >
-          <p v-bind:style="buttonTextAlign">{{buttonTitle.toUpperCase()}}</p>
+          <p 
+            v-bind:style="buttonTextAlign"
+          >
+            {{buttonTitle.toUpperCase()}}
+          </p>
         </div>
       </div>
     </a>
@@ -35,17 +39,9 @@ export default {
       buttonIco: this.ico,
       buttonWidth: this.width ? this.width : 'width: 250px',
       buttonLink: this.link ? this.link : '#',
-      buttonTextAlign: this.textAlign ? this.textAlign : ""
-      // buttonRouterLink: this.routerLink
+      buttonTextAlign: this.textAlign ? this.textAlign : ''
     }
   },
-  // methods: {
-  //   goTo() {
-  //     if (this.buttonRouterLink) {
-  //       this.$router.push('/about_me');
-  //     }
-  //   }
-  // }
 }
 </script>
 
