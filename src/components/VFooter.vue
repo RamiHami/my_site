@@ -51,7 +51,7 @@ export default {
 }
 .footer-wrapper {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-around;
   width: 100%;
   height: 100%;
   padding-left: 15px;
@@ -59,10 +59,8 @@ export default {
 }
 .footer-left-wrapper {
   display: flex;
-  width: 50%;
 }
 .footer-right-wrapper {
-  width: 50%;
   display: flex;
   justify-content: right;
 }
